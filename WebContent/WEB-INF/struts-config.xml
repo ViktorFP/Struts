@@ -8,9 +8,13 @@
 	<form-beans>
 		<form-bean name="loginForm" type="by.epamlab.forms.LoginForm" />
 		<form-bean name="fareForm" type="by.epamlab.forms.FareForm" />
-		<form-bean name="exitForm" type="by.epamlab.forms.ExitForm" />	
-	</form-beans>	
+		<form-bean name="exitForm" type="by.epamlab.forms.ExitForm" />
+	</form-beans>
 	<action-mappings>
+		<action
+            path="/InputSubmit"
+            forward="mainPage"
+         />
 		<action name="loginForm" path="/Login" type="by.epamlab.actions.LoginAction"
 			scope="request" input="/login.jsp">
 			<forward name="failure" path="/login.jsp" redirect="true" />
@@ -25,14 +29,13 @@
 			scope="request">
 			<forward name="success" path="/index.jsp" redirect="true" />
 		</action>
-		<action
-			path="/elements/Locale"
-			type="by.epamlab.actions.LanguageSelectAction"
-			parameter="method"
-			validate="false"
-			>
+		<action path="/elements/Locale" type="by.epamlab.actions.LanguageSelectAction"
+			parameter="method" validate="false">
 			<forward name="success" path="/elements/reservationPage.jsp" />
 		</action>
 	</action-mappings>
 	<message-resources parameter="by/epamlab/resource" />
+	<plug-in className="org.apache.struts.tiles.TilesPlugin">
+		<set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml" />
+	</plug-in>
 </struts-config>
