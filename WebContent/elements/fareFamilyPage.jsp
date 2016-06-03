@@ -18,10 +18,10 @@
 				<nested:write property="fareFamilyCode" />
 			</h2>
 
-			<h4>
+			<h4 class="list">
 				<bean:message key="jsp.fare.components" />
 			</h4>
-			<ul>
+			<ul class="list">
 				<nested:iterate property="ancillaryAirComponent">
 					<li><nested:write property="ancillaryAirComponentCode" /></li>
 				</nested:iterate>

@@ -10,15 +10,16 @@
 		<form-bean name="fareForm" type="by.epamlab.forms.FareForm" />
 		<form-bean name="exitForm" type="by.epamlab.forms.ExitForm" />
 	</form-beans>
-	<action-mappings>
-		<action
-            path="/InputSubmit"
-            forward="mainPage"
-         />
-		<action name="loginForm" path="/Login" type="by.epamlab.actions.LoginAction"
-			scope="request" input="/login.jsp">
-			<forward name="failure" path="/login.jsp" redirect="true" />
-			<forward name="success" path="/elements/reservationPage.jsp"
+	<action-mappings>		
+		  <action path="/Tab" parameter="method" type="by.epamlab.actions.TabAction">
+            <forward name="reservationPage" path="reservationPage"/>
+            <forward name="customerPage" path="customerPage"/>
+            <forward name="fareFamilyPage" path="fareFamilyPage"/>
+        </action>
+        <action name="loginForm" path="/Login" type="by.epamlab.actions.LoginAction"
+			scope="request" input="/elements/login.jsp">
+			<forward name="failure" path="login" redirect="true" />
+			<forward name="success" path="reservationPage"
 				redirect="true" />
 		</action>
 		<action name="fareForm" path="/fareFamilyPage" type="by.epamlab.actions.FareAction"
@@ -31,9 +32,10 @@
 		</action>
 		<action path="/elements/Locale" type="by.epamlab.actions.LanguageSelectAction"
 			parameter="method" validate="false">
-			<forward name="success" path="/elements/reservationPage.jsp" />
+			<forward name="success" path="reservationPage" />
 		</action>
 	</action-mappings>
+	<controller nocache="true"/>
 	<message-resources parameter="by/epamlab/resource" />
 	<plug-in className="org.apache.struts.tiles.TilesPlugin">
 		<set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml" />

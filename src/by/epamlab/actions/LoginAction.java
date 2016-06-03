@@ -20,11 +20,6 @@ public class LoginAction extends Action {
 			HttpServletRequest request, HttpServletResponse response)
 			throws Exception {
 		LoginForm loginForm = (LoginForm) form;
-		/*
-		 * after getting user data (name and password) we must send request to
-		 * DB (or another storage) for checking it and getting the reservation's
-		 * data
-		 */
 		IUserDAO userDAO = UserFactory.getClassFromFactory();
 		User user = userDAO.getUser(loginForm.getUserName(),
 				loginForm.getPassword());

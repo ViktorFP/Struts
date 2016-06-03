@@ -3,9 +3,24 @@
   "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
   "http://struts.apache.org/dtds/tiles-config_1_1.dtd">
 <tiles-definitions>
-	<definition name="mainPage" path="/layout.jsp">
+	<definition name="layout" path="/layout.jsp">
+		<put name="title" value="Struts" />
 		<put name="header" value="/elements/header.jsp" />
 		<put name="footer" value="/elements/footer.jsp" />
-		<put name="content" value="/login.jsp" />
+		<put name="content" value="/elements/login.jsp" />
+	</definition>
+	<definition name="login" extends="layout">	    
+	</definition>
+	<definition name="reservationPage" extends="layout">
+		<put name="header" value="/elements/locale.jsp" />
+		<put name="content" value="/elements/reservationPage.jsp" />
+	</definition>
+	<definition name="customerPage" extends="layout">
+		<put name="header" value="/elements/locale.jsp" />
+		<put name="content" value="/elements/customerPage.jsp" />
+	</definition>
+	<definition name="fareFamilyPage" extends="layout">
+		<put name="header" value="/elements/locale.jsp" />
+		<put name="content" value="/elements/fareFamilyPage.jsp" />
 	</definition>
 </tiles-definitions>

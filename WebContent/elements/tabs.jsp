@@ -6,13 +6,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 </head>
 <body>
-	<%@ include file="locale.jsp"%>
 	<ul class="nav nav-tabs">
-		<li><a data-toggle="tab" href="reservationPage.jsp"><bean:message
+		<li><a data-toggle="tab" href="Tab.do?method=reservationPage"><bean:message
 					key="jsp.tabs.reservation" /></a></li>
-		<li><a data-toggle="tab" href="customerPage.jsp"><bean:message
+		<li><a data-toggle="tab" href="Tab.do?method=customerPage"><bean:message
 					key="jsp.tabs.customer" /></a></li>
-		<li><a data-toggle="tab" href="fareFamilyPage.jsp"><bean:message
+		<li><a data-toggle="tab" href="Tab.do?method=fareFamilyPage"><bean:message
 					key="jsp.tabs.fare" /></a></li>
 		<li><html:link action="/Exit">
 				<bean:message key="jsp.tabs.exit" />
