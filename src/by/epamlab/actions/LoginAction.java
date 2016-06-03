@@ -23,7 +23,6 @@ public class LoginAction extends Action {
 		IUserDAO userDAO = UserFactory.getClassFromFactory();
 		User user = userDAO.getUser(loginForm.getUserName(),
 				loginForm.getPassword());
-
 		if (user != null) {
 			// set this user to session scope
 			request.getSession().setAttribute(Constants.USER, user);

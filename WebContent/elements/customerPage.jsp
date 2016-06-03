@@ -7,7 +7,7 @@
 <body>
 	<div class="list">
 		<div>
-			<reservation:customer />
+			<reservation:customer var="customer"/>
 			<h3>
 				<bean:message key="jsp.customer.customer" />
 			</h3>
@@ -25,7 +25,7 @@
 			</h5>
 		</div>
 		<div>
-			<reservation:email />
+			<reservation:email var="email"/>
 			<h3>
 				<bean:message key="jsp.customer.email" />
 			</h3>
@@ -39,7 +39,7 @@
 		</div>
 
 		<div>
-			<reservation:phone />
+			<reservation:phone var="phone"/>
 			<h3>
 				<bean:message key="jsp.customer.phone" />
 			</h3>
@@ -52,7 +52,7 @@
 				<bean:write name="phone" property="syncStatus" />
 			</h5>
 		</div>
-		<reservation:pays />
+		<reservation:pays var="payments"/>
 		<table class="table table-striped table-hover table-condensed">
 			<caption>
 				<bean:message key="jsp.customer.payments" />

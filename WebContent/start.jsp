@@ -5,6 +5,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <html:base />
 <title><tiles:getAsString name="title" /></title>
 <link rel='stylesheet' href='styles/bootstrap.min.css' type='text/css'

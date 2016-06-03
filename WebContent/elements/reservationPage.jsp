@@ -18,7 +18,7 @@
 			<reservation:resDescr />
 		</h2>
 
-		<reservation:resComp />
+		<reservation:resComp var="components"/>
 		<table class="table table-striped table-hover table-condensed">
 			<caption>
 				<bean:message key="jsp.reservation.components" />
