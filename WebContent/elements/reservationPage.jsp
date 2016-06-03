@@ -1,16 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
 <%@ taglib uri="/tags/reservation" prefix="reservation"%>
 <%@ taglib uri="/WEB-INF/tlds/struts-logic.tld" prefix="logic"%>
 <%@ taglib uri="/WEB-INF/tlds/struts-bean.tld" prefix="bean"%>
-<!DOCTYPE html">
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title><bean:message key="jsp.reservation.title" /></title>
 </head>
 <body>
-	<%@ include file="tabs.jsp"%>
 	<div class="list">
 		<h1>
 			<bean:message key="jsp.reservation.reservation" />

@@ -17,8 +17,8 @@
             <forward name="fareFamilyPage" path="fareFamilyPage"/>
         </action>
         <action name="loginForm" path="/Login" type="by.epamlab.actions.LoginAction"
-			scope="request" input="/elements/login.jsp">
-			<forward name="failure" path="login" redirect="true" />
+			scope="request" input="/index.jsp">
+			<forward name="failure" path="/index.jsp" redirect="true" />
 			<forward name="success" path="reservationPage"
 				redirect="true" />
 		</action>
@@ -35,7 +35,6 @@
 			<forward name="success" path="reservationPage" />
 		</action>
 	</action-mappings>
-	<controller nocache="true"/>
 	<message-resources parameter="by/epamlab/resource" />
 	<plug-in className="org.apache.struts.tiles.TilesPlugin">
 		<set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml" />

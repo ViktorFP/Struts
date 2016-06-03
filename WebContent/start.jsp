@@ -15,12 +15,6 @@
 <body>
 	<table>
 		<tr>
-			<td><tiles:insert attribute="header" /></td>
-		</tr>
-		<tr>
-			<td><tiles:insert attribute="tabs" /></td>
-		</tr>
-		<tr>
 			<td><tiles:insert attribute="content" /></td>
 		</tr>
 		<tr>
